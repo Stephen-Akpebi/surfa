@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+	<!-- FAVICONS ICON ============================================= -->
+	{% comment %} <link rel="icon" href="{% static "assets/images/favicon.ico" %}" type="image/x-icon" />
+	<link rel="shortcut icon" type="image/x-icon" href="{% static "assets/images/favicon.png" %}" /> {% endcomment %}
+	<link rel="apple-touch-icon" sizes="57x57" href="{% static "favicon/apple-icon-57x57.png" %}"/>
+    <link rel="apple-touch-icon" sizes="60x60" href="{% static "favicon/apple-icon-60x60.png" %}"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="{% static "favicon/apple-icon-72x72.png" %}"/>
+    <link rel="apple-touch-icon" sizes="76x76" href="{% static "favicon/apple-icon-76x76.png" %}"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="{% static "favicon/apple-icon-114x114.png" %}"/>
+    <link rel="apple-touch-icon" sizes="120x120" href="{% static "favicon/apple-icon-120x120.png" %}"/>
+    <link rel="apple-touch-icon" sizes="144x144" href="{% static "favicon/apple-icon-144x144.png" %}"/>
+    <link rel="apple-touch-icon" sizes="152x152" href="{% static "favicon/apple-icon-152x152.png" %}"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static "favicon/apple-icon-180x180.png" %}"/>
+    <link rel="icon" type="image/png" sizes="192x192"  href="{% static "favicon/android-icon-192x192.png" %}"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static "favicon/favicon-32x32.png" %}"/>
+    <link rel="icon" type="image/png" sizes="96x96" href="{% static "favicon/favicon-96x96.png" %}"/>
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static "favicon/favicon-16x16.png" %}"/>
+    <link rel="manifest" href="{% static "manifest.json" %}"/>
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png"/>
+    <meta name="theme-color" content="#ffffff"/>
+	<!-- META ============================================= -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="keywords" content="SURFA" />
+	<meta name="author" content="SURFA" />
+	<meta name="robots" content="" />
+	
+	<!-- DESCRIPTION -->
+	<meta name="description" content="SURFA" />
+	
+	<!-- OG -->
+	<meta property="og:title" content="SURFA" />
+	<meta property="og:description" content="SURFA" />
+	<meta property="og:image" content="" />
+	<meta name="format-detection" content="telephone=no">
+	
+	
+	<!-- PAGE TITLE HERE ============================================= -->
+	<title>Surfa </title>
+	
+	<!-- MOBILE SPECIFIC ============================================= -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href={% static "fonts/material-icon/css/material-design-iconic-font.min.css" %}>
+    <!-- Main css -->
+    <link rel="stylesheet" href={% static "css/style.css" %}>
+</head>
+<body>
+	<div class="main">
+	    <!-- Sing in  Form -->
+		<section class="sign-in">
+            <div class="container">
+                <div class="signin-content">
+                    <div class="signin-image">
+                        <figure><img src={% static "images/10copy.png" %} alt="sign up image"></figure>
+                        <a href="{% url 'accounts:signup' %}" class="signup-image-link">Create an account</a>
+                    </div>
+                    <div class="signin-form">
+                        <h2 class="form-title">Login</h2>
+                        <form method="POST" class="login-form" id="login-form" action="">
+							{% csrf_token %}
+							{% load bootstrap5 %}
+							{% bootstrap_form form %}
+                            <div class="form-group">
+                                <input type="checkbox" name="remember-me" id="remember-me" class="agree-term" />
+                                <label for="remember-me" class="label-agree-term"><span><span></span></span>Remember me</label>
+                            </div>
+                            <div class="form-group form-button">
+                                <input type="submit" name="submit" id="signin" class="form-submit" value="Login"/>
+                                <a href="{% url 'accounts:password_reset' %}" class="signup-image-link">forgot password</a>
+                            </div>
+                        </form>
+                        <div class="social-login">
+                            <span class="social-label">Or login with</span>
+                            <ul class="socials">
+                                <li><a href="#"><i class="display-flex-center zmdi zmdi-facebook"></i></a></li>
+                                <li><a href="#"><i class="display-flex-center zmdi zmdi-twitter"></i></a></li>
+                                <li><a href="#"><i class="display-flex-center zmdi zmdi-google"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+	</div>
+<!-- External JavaScripts -->
+<!-- JS -->
+<script src={% static "vendor/jquery/jquery.min.js" %}></script>
+<script src={% static "js/main.js" %}></script>
+</body>
+</html>

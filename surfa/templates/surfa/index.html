@@ -1,0 +1,588 @@
+
+{% extends 'surfa/base.html' %}
+    <!-- Header Top END ==== -->
+    <!-- Content -->
+{% block content %}
+{% load static %}
+{% if user.is_authenticated %}
+<div class="page-wraper">
+	<div class="page-content bg-white">
+        <!-- inner page banner -->
+        <div class="page-banner " style="background-image:url({% static "assets/images/banner/forty.jpg" %});">
+            <div class="container">
+                <div class="page-banner-entry">
+                    <h1 class="text-white">Well come to surfa!</h1>
+                </div>
+            </div>
+        </div>
+		<!-- Breadcrumb row -->
+		<div class="breadcrumb-row">
+		</div>
+		<div class="content-block">
+			<!-- Our Services -->
+			<!-- Popular Courses -->
+			<div class="section-area section-sp2 popular-courses-bx">
+                <div class="container">
+					<div class="row">
+						<div class="col-md-12 heading-bx left">
+							<h2 class="title-head">Popular <span>Jobs</span></h2>
+							<p>We offer endless posibilities to put you on the path to Success</p>
+						</div>
+					</div>
+					<di class="row">
+					<div class="courses-carousel owl-carousel owl-btn-1 col-12 p-lr0">
+						<div class="item">
+							<div class="cours-bx">
+								<div class="action-box">
+									<img src="{% static "assets/images/courses/pic01.jpg" %}" class="rounded featured-image-list" alt="">
+									<a href="#" class="btn">Read More</a>
+								</div>
+								<div class="info-bx text-center">
+									<h5><a href="#">Web Develpment</a></h5>
+									<span>Programming</span>
+								</div>
+								<div class="cours-more-info">
+									<div class="review">
+										<span>Business Friendly</span>
+										<ul class="cours-star">
+											<li class="active"><i class="fa fa-star"></i></li>
+											<li class="active"><i class="fa fa-star"></i></li>
+											<li class="active"><i class="fa fa-star"></i></li>
+											<li class="active"><i class="fa fa-star"></i></li>
+											<li class="active"><i class="fa fa-star"></i></li>
+										</ul>
+									</div>
+									<div class="price">
+										<h5>High Demand</h5>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="cours-bx">
+								<div class="action-box">
+									<img src="{% static "assets/images/courses/pic02.png" %}" class="rounded featured-image-list" alt="">
+									<a href="#" class="btn">Read More</a>
+								</div>
+								<div class="info-bx text-center">
+									<h5><a href="#">Android Development</a></h5>
+									<span>Programming</span>
+								</div>
+								<div class="cours-more-info">
+									<div class="review">
+										<span>Better User Experience</span>
+										<ul class="cours-star">
+											<li class="active"><i class="fa fa-star"></i></li>
+											<li class="active"><i class="fa fa-star"></i></li>
+											<li class="active"><i class="fa fa-star"></i></li>
+											<li class="active"><i class="fa fa-star"></i></li>
+											<li class="active"><i class="fa fa-star"></i></li>
+										</ul>
+									</div>
+									<div class="price">
+										<h5>High Demand</h5>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="cours-bx">
+								<div class="action-box">
+									<img src="{% static "assets/images/courses/pic02.png" %}" class="rounded featured-image-list" alt="">
+									<a href="#" class="btn">Read More</a>
+								</div>
+								<div class="info-bx text-center">
+									<h5><a href="#">Android Development</a></h5>
+									<span>Programming</span>
+								</div>
+								<div class="cours-more-info">
+									<div class="review">
+										<span>Better User Experience</span>
+										<ul class="cours-star">
+											<li class="active"><i class="fa fa-star"></i></li>
+											<li class="active"><i class="fa fa-star"></i></li>
+											<li class="active"><i class="fa fa-star"></i></li>
+											<li class="active"><i class="fa fa-star"></i></li>
+											<li class="active"><i class="fa fa-star"></i></li>
+										</ul>
+									</div>
+									<div class="price">
+										<h5>High Demand</h5>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="cours-bx">
+								<div class="action-box">
+									<img src="{% static "assets/images/courses/pic03.png" %}" class="rounded featured-image-list" alt="">
+									<a href="#" class="btn">Read More</a>
+								</div>
+								<div class="info-bx text-center">
+									<h5><a href="#">Apple Developer</a></h5>
+									<span>Programming</span>
+								</div>
+								<div class="cours-more-info">
+									<div class="review">
+										<span>Strong Brand Value</span>
+										<ul class="cours-star">
+											<li class="active"><i class="fa fa-star"></i></li>
+											<li class="active"><i class="fa fa-star"></i></li>
+											<li class="active"><i class="fa fa-star"></i></li>
+											<li class="active"><i class="fa fa-star"></i></li>
+											<li class="active"><i class="fa fa-star"></i></li>
+										</ul>
+									</div>
+									<div class="price">
+										<h5>High Demand</h5>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="cours-bx">
+								<div class="action-box">
+									<img src="{% static "assets/images/courses/pic04.jpg" %}" class="rounded featured-image-list" alt="">
+									<a href="#" class="btn">Read More</a>
+								</div>
+								<div class="info-bx text-center">
+									<h5><a href="#">Web Design</a></h5>
+									<span>Programming</span>
+								</div>
+								<div class="cours-more-info">
+									<div class="review">
+										<span>Better Scalability </span>
+										<ul class="cours-star">
+											<li class="active"><i class="fa fa-star"></i></li>
+											<li class="active"><i class="fa fa-star"></i></li>
+											<li class="active"><i class="fa fa-star"></i></li>
+											<li class="active"><i class="fa fa-star"></i></li>
+											<li class="active"><i class="fa fa-star"></i></li>
+										</ul>
+									</div>
+									<div class="price">
+										<h5>High Demand</h5>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="content-block">
+				<!-- Portfolio  -->
+				<div class="section-area section-sp1 gallery-bx">
+					<div class="container">
+						<div class="col-md-12 heading-bx left">
+							<h2 class="title-head">Our <span>Gallery</span></h2>
+							<p>We offer endless posibilities to put you on the path to Success</p>
+						</div>
+						<div class="feature-filters clearfix center m-b40">
+							<ul class="filters" data-toggle="buttons">
+								<li data-filter="" class="btn active">
+									<input type="radio">
+									<a href="#"><span>All</span></a> 
+								</li>
+								<li data-filter="book" class="btn">
+									<input type="radio">
+									<a href="#"><span>web development</span></a> 
+								</li>
+								<li data-filter="courses" class="btn">
+									<input type="radio">
+									<a href="#"><span>Android apps</span></a> 
+								</li>
+								<li data-filter="education" class="btn">
+									<input type="radio">
+									<a href="#"><span>iOS apps</span></a> 
+								</li>
+							</ul>
+						</div>
+						<div class="clearfix">
+							<div id="masonry" class="ttr-gallery-listing magnific-image row">
+								<div class="action-card col-lg-3 col-md-4 col-sm-6 book">
+									<div class="ttr-box portfolio-bx">
+										<div class="ttr-media media-ov2 media-effect">
+											<a href="javascript:void(0);">
+												<img src="{% static "assets/images/portfolio/image_1.jpg" %}" class="rounded featured-image-list" alt=""> 
+											</a>
+											<div class="ov-box">
+												<div class="overlay-icon align-m"> 
+													<a href="{% static "assets/images/portfolio/image_1.jpg" %}" class="magnific-anchor" title="Title Come Here">
+														<i class="ti-search"></i>
+													</a>
+												</div>
+												<div class="portfolio-info-bx bg-primary">
+													<h4><a href="#">Soft skills</a></h4>
+													
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="action-card col-lg-3 col-md-4 col-sm-6 education book">
+									<div class="ttr-box portfolio-bx">
+										<div class="ttr-media media-ov2 media-effect">
+											<a href="javascript:void(0);">
+												<img src="{% static "assets/images/portfolio/image_2.jpg" %}" class="rounded featured-image-list" alt=""> 
+											</a>
+											<div class="ov-box">
+												<div class="overlay-icon align-m"> 
+													<a href="{% static "assets/images/portfolio/image_2.jpg" %}" class="magnific-anchor" title="Title Come Here">
+														<i class="ti-search"></i>
+													</a>
+												</div>
+												<div class="portfolio-info-bx bg-primary">
+													<h4><a href="#">Soft skills</a></h4>
+													
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="action-card col-lg-3 col-md-4 col-sm-6 courses">
+									<div class="ttr-box portfolio-bx">
+										<div class="ttr-media media-ov2 media-effect">
+											<a href="javascript:void(0);">
+												<img src="{% static "assets/images/portfolio/image_3.jpg" %}" class="rounded featured-image-list" alt=""> 
+											</a>
+											<div class="ov-box">
+												<div class="overlay-icon align-m"> 
+													<a href="{% static "assets/images/portfolio/image_3.jpg" %}" class="magnific-anchor" title="Title Come Here">
+														<i class="ti-search"></i>
+													</a>
+												</div>
+												<div class="portfolio-info-bx bg-primary">
+													<h4><a href="#">Soft skills</a></h4>
+													
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="action-card col-lg-3 col-md-4 col-sm-6 book education">
+									<div class="ttr-box portfolio-bx">
+										<div class="ttr-media media-ov2 media-effect">
+											<a href="javascript:void(0);">
+												<img src="{% static "assets/images/portfolio/image_4.jpg" %}" class="rounded featured-image-list" alt=""> 
+											</a>
+											<div class="ov-box">
+												<div class="overlay-icon align-m"> 
+													<a href="{% static "assets/images/portfolio/image_4.jpg" %}" class="magnific-anchor" title="Title Come Here">
+														<i class="ti-search"></i>
+													</a>
+												</div>
+												<div class="portfolio-info-bx bg-primary">
+													<h4><a href="#">Soft skills</a></h4>
+													
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="action-card col-lg-3 col-md-4 col-sm-6 courses">
+									<div class="ttr-box portfolio-bx">
+										<div class="ttr-media media-ov2 media-effect">
+											<a href="javascript:void(0);">
+												<img src="{% static "assets/images/portfolio/image_5.jpg" %}" class="rounded featured-image-list" alt=""> 
+											</a>
+											<div class="ov-box">
+												<div class="overlay-icon align-m"> 
+													<a href="{% static "assets/images/portfolio/image_5.jpg" %}" class="magnific-anchor" title="Title Come Here">
+														<i class="ti-search"></i>
+													</a>
+												</div>
+												<div class="portfolio-info-bx bg-primary">
+													<h4><a href="#">Soft skills</a></h4>
+													
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="action-card col-lg-3 col-md-4 col-sm-6 education">
+									<div class="ttr-box portfolio-bx">
+										<div class="ttr-media media-ov2 media-effect">
+											<a href="javascript:void(0);">
+												<img src="{% static "assets/images/portfolio/image_6.jpg" %}" class="rounded featured-image-list" alt=""> 
+											</a>
+											<div class="ov-box">
+												<div class="overlay-icon align-m"> 
+													<a href="{% static "assets/images/portfolio/image_6.jpg" %}" class="magnific-anchor" title="Title Come Here">
+														<i class="ti-search"></i>
+													</a>
+												</div>
+												<div class="portfolio-info-bx bg-primary">
+													<h4><a href="#">Soft skills</a></h4>
+													
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="action-card col-lg-3 col-md-4 col-sm-6 book">
+									<div class="ttr-box portfolio-bx">
+										<div class="ttr-media media-ov2 media-effect">
+											<a href="javascript:void(0);">
+												<img src="{% static "assets/images/portfolio/image_7.jpg" %}" class="rounded featured-image-list" alt=""> 
+											</a>
+											<div class="ov-box">
+												<div class="overlay-icon align-m"> 
+													<a href="{% static "assets/images/portfolio/image_7.jpg" %}" class="magnific-anchor" title="Title Come Here">
+														<i class="ti-search"></i>
+													</a>
+												</div>
+												<div class="portfolio-info-bx bg-primary">
+													<h4><a href="#">Soft skills</a></h4>
+													
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="action-card col-lg-3 col-md-4 col-sm-6 courses">
+									<div class="ttr-box portfolio-bx">
+										<div class="ttr-media media-ov2 media-effect">
+											<a href="javascript:void(0);">
+												<img src="{% static "assets/images/portfolio/image_8.jpg" %}" class="rounded featured-image-list" alt=""> 
+											</a>
+											<div class="ov-box">
+												<div class="overlay-icon align-m"> 
+													<a href="{% static "assets/images/portfolio/image_8.jpg" %}" class="magnific-anchor" title="Title Come Here">
+														<i class="ti-search"></i>
+													</a>
+												</div>
+												<div class="portfolio-info-bx bg-primary">
+													<h4><a href="#">Soft skills</a></h4>
+													
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="action-card col-lg-3 col-md-4 col-sm-6 education courses">
+									<div class="ttr-box portfolio-bx">
+										<div class="ttr-media media-ov2 media-effect">
+											<a href="javascript:void(0);">
+												<img src="{% static "assets/images/portfolio/image_9.jpg" %}" class="rounded featured-image-list" alt=""> 
+											</a>
+											<div class="ov-box">
+												<div class="overlay-icon align-m"> 
+													<a href="{% static "assets/images/portfolio/image_9.jpg" %}"  class="magnific-anchor" title="Title Come Here">
+														<i class="ti-search"></i>
+													</a>
+												</div>
+												<div class="portfolio-info-bx bg-primary">
+													<h4><a href="#">Soft skills</a></h4>
+													
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="action-card col-lg-3 col-md-4 col-sm-6 book">
+									<div class="ttr-box portfolio-bx">
+										<div class="ttr-media media-ov2 media-effect">
+											<a href="javascript:void(0);">
+												<img src="{% static "assets/images/portfolio/image_10.jpg" %}" class="rounded featured-image-list" alt=""> 
+											</a>
+											<div class="ov-box">
+												<div class="overlay-icon align-m"> 
+													<a href="{% static "assets/images/portfolio/image_10.jpg" %}" class="magnific-anchor" title="Title Come Here">
+														<i class="ti-search"></i>
+													</a>
+												</div>
+												<div class="portfolio-info-bx bg-primary">
+													<h4><a href="#">Soft skills</a></h4>
+													
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="action-card col-lg-3 col-md-4 col-sm-6 courses">
+									<div class="ttr-box portfolio-bx">
+										<div class="ttr-media media-ov2 media-effect">
+											<a href="javascript:void(0);">
+												<img src="{% static "assets/images/portfolio/image_11.jpg" %}" class="rounded featured-image-list"  alt=""> 
+											</a>
+											<div class="ov-box">
+												<div class="overlay-icon align-m"> 
+													<a href="{% static "assets/images/portfolio/image_11.jpg" %}" class="magnific-anchor" title="Title Come Here">
+														<i class="ti-search"></i>
+													</a>
+												</div>
+												<div class="portfolio-info-bx bg-primary">
+													<h4><a href="#">Soft skills</a></h4>
+													
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="action-card col-lg-3 col-md-4 col-sm-6 education book">
+									<div class="ttr-box portfolio-bx">
+										<div class="ttr-media media-ov2 media-effect">
+											<a href="javascript:void(0);">
+												<img src="{% static "assets/images/portfolio/image_12.jpg" %}" class="rounded featured-image-list" alt=""> 
+											</a>
+											<div class="ov-box">
+												<div class="overlay-icon align-m"> 
+													<a href="{% static "assets/images/portfolio/image_12.jpg" %}" class="magnific-anchor" title="Title Come Here">
+														<i class="ti-search"></i>
+													</a>
+												</div>
+												<div class="portfolio-info-bx bg-primary">
+													<h4><a href="#">Soft skills</a></h4>
+													
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="section-area section-sp2 bg-fix " style="background-image:url({% static "assets/images/banner/forty.jpg" %});">
+                <div class="container">
+					<div class="row">
+						<div class="col-md-12 text-white heading-bx left">
+							<h2 class="title-head text-uppercase">what people <span>say</span></h2>
+							<p>It is a long established fact that a reader will be distracted by the readable content of a page</p>
+						</div>
+					</div>
+					<div class="testimonial-carousel owl-carousel owl-btn-1 col-12 p-lr0">
+						<div class="item">
+							<div class="testimonial-bx">
+								<div class="testimonial-thumb">
+									<img src="{% static "assets/images/banner/forty.jpg" %}" alt="">
+								</div>
+								<div class="testimonial-info">
+									<h5 class="name">Peter Packer</h5>
+									<p>-Art Director</p>
+								</div>
+								<div class="testimonial-content">
+									<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type...</p>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="testimonial-bx">
+								<div class="testimonial-thumb">
+									<img src="{% static "assets/images/banner/forty.jpg" %}" alt="">
+								</div>
+								<div class="testimonial-info">
+									<h5 class="name">Peter Packer</h5>
+									<p>-Art Director</p>
+								</div>
+								<div class="testimonial-content">
+									<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type...</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="section-area section-sp1">
+				<div class="container">
+					<div class="col-md-12 heading-bx left">
+						<h2 class="title-head">Our <span>Service</span></h2>
+						<p>Why choose Surfa</p>
+					</div>
+					<div class="row">
+						<div class="col-sm-6 margin-bottom30">
+							<div class="feature-icon-wrap services-icons clearfix">
+								<div class="left-side-icon">
+									<i class="ion-ios-paperplane-outline front-icon"></i>
+								</div>
+								<div class="features-text-right">
+									<h3>Marketing</h3>
+									<p>
+										Surfa explore, create and deliver value to meet the needs of it's clients. Surfa also provides service to their customers use to increase brand awareness and sales.
+									</p>
+								</div>
+							</div>
+						</div><!--services col-->
+						<div class="col-sm-6 margin-bottom30">
+							<div class="feature-icon-wrap services-icons clearfix">
+								<div class="left-side-icon">
+									<i class="ion-ios-browsers-outline front-icon"></i>
+								</div>
+								<div class="features-text-right">
+									<h3>Software,Web & Graphics design</h3>
+									<p>
+										Surfa design and create quality websites and software application which are reliable, secure easy-to-use,affordable, easy-to-deploy, and scalable.We also offer optimization services that include monitoring and refining existing website.
+									</p>
+								</div>
+							</div>
+						</div><!--services col-->
+					</div><!--services row-->
+					<div class="row">
+						<div class="col-sm-6 margin-bottom30">
+							<div class="feature-icon-wrap services-icons clearfix">
+								<div class="left-side-icon">
+									<i class="ion-ios-world-outline front-icon"></i>
+								</div>
+								<div class="features-text-right">
+									<h3>Social Media</h3>
+									<p>
+										Connect with us on any social media platform.
+									</p>
+								</div>
+							</div>
+						</div><!--services col-->
+						<div class="col-sm-6 margin-bottom30">
+							<div class="feature-icon-wrap services-icons clearfix">
+								<div class="left-side-icon">
+									<i class="ion-ios-color-wand-outline front-icon"></i>
+								</div>
+								<div class="features-text-right">
+									<h3>Creative ideas</h3>
+									<p>
+										We discover and define ideas, create and design visuals, develop a site, test, and go lives.
+									</p>
+								</div>
+							</div>
+						</div><!--services col-->
+					</div><!--services row-->
+					<div class="row">
+						<div class="col-sm-6 margin-bottom30">
+							<div class="feature-icon-wrap services-icons clearfix">
+								<div class="left-side-icon">
+									<i class="ion-ios-crop front-icon"></i>
+								</div>
+								<div class="features-text-right">
+									<h3>Responsive Design</h3>
+									<p>
+										Responsive web design and development to enhance good looking appearance of all websites on all user devices irrespective the user's device screen.
+									</p>
+								</div>
+							</div>
+						</div><!--services col-->
+						<div class="col-sm-6 margin-bottom30">
+							<div class="feature-icon-wrap services-icons clearfix">
+								<div class="left-side-icon">
+									<i class="ion-ios-people-outline front-icon"></i>
+								</div>
+								<div class="features-text-right">
+									<h3>Customer Support</h3>
+									<p>
+										We assist our Customers promoting their business's brand name. We also assist Customers in getting a mobile version of their existing website to add more traffic(increase their website viewers) to their site.
+									</p>
+								</div>
+							</div>
+						</div><!--services col-->
+					</div><!--services row-->
+				</div>
+			</div>
+        </div>
+		<!-- contact area END -->
+    </div>
+    <!-- Content END-->
+	<!-- Footer ==== -->
+	{% block footer %}
+	{% include 'surfa/footer.html' %}
+	{% endblock footer %}
+{% endif %}
+{% endblock content %}

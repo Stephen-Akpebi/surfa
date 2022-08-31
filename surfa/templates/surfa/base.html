@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+	{% load static %}
+
+<head>
+	<!-- FAVICONS ICON ============================================= -->
+	{% comment %} <link rel="icon" href="{% static "assets/images/favicon.ico" %}" type="image/x-icon" />
+	<link rel="shortcut icon" type="image/x-icon" href="{% static "assets/images/favicon.png" %}" /> {% endcomment %}
+	<link rel="apple-touch-icon" sizes="57x57" href="{% static "favicon/apple-icon-57x57.png" %}"/>
+    <link rel="apple-touch-icon" sizes="60x60" href="{% static "favicon/apple-icon-60x60.png" %}"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="{% static "favicon/apple-icon-72x72.png" %}"/>
+    <link rel="apple-touch-icon" sizes="76x76" href="{% static "favicon/apple-icon-76x76.png" %}"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="{% static "favicon/apple-icon-114x114.png" %}"/>
+    <link rel="apple-touch-icon" sizes="120x120" href="{% static "favicon/apple-icon-120x120.png" %}"/>
+    <link rel="apple-touch-icon" sizes="144x144" href="{% static "favicon/apple-icon-144x144.png" %}"/>
+    <link rel="apple-touch-icon" sizes="152x152" href="{% static "favicon/apple-icon-152x152.png" %}"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static "favicon/apple-icon-180x180.png" %}"/>
+    <link rel="icon" type="image/png" sizes="192x192"  href="{% static "favicon/android-icon-192x192.png" %}"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static "favicon/favicon-32x32.png" %}"/>
+    <link rel="icon" type="image/png" sizes="96x96" href="{% static "favicon/favicon-96x96.png" %}"/>
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static "favicon/favicon-16x16.png" %}"/>
+    <link rel="manifest" href="{% static "manifest.json" %}"/>
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png"/>
+    <meta name="theme-color" content="#ffffff"/>
+
+	<!-- META ============================================= -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="keywords" content="SURFA" />
+	<meta name="author" content="SURFA" />
+	<meta name="robots" content="" />
+	
+	<!-- DESCRIPTION -->
+	<meta name="description" content="SURFA" />
+	
+	<!-- OG -->
+	<meta property="og:title" content="SURFA" />
+	<meta property="og:description" content="SURFA" />
+	<meta property="og:image" content="" />
+	<meta name="format-detection" content="telephone=no">
+	
+	
+	<!-- PAGE TITLE HERE ============================================= -->
+	<title>Surfa </title>
+	
+	<!-- MOBILE SPECIFIC ============================================= -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<!--[if lt IE 9]>
+	<script src="assets/js/html5shiv.min.js"></script>
+	<script src="assets/js/respond.min.js"></script>
+	<![endif]-->
+	
+	<link href="{% static "assets3/icons/css/ionicons.min.css" %}" rel="stylesheet" type="text/css">
+	<!-- All PLUGINS CSS ============================================= -->
+	<link rel="stylesheet" type="text/css" href="{% static "assets/css/assets.css"%}">
+	
+	<!-- TYPOGRAPHY ============================================= -->
+	<link rel="stylesheet" type="text/css" href="{% static "assets/css/typography.css" %}">
+	
+	<!-- SHORTCODES ============================================= -->
+	<link rel="stylesheet" type="text/css" href="{% static "assets/css/shortcodes/shortcodes.css" %}">
+	
+	<!-- STYLESHEETS ============================================= -->
+	<link rel="stylesheet" type="text/css" href="{% static "assets/css/style.css" %}">
+	<link class="skin" rel="stylesheet" type="text/css" href="{% static "assets/css/color/color-1.css" %}">
+	<link rel="stylesheet" href="{% static "assets3/css/style.css" %}">
+	
+	<!-- REVOLUTION SLIDER CSS ============================================= -->
+	<link rel="stylesheet" type="text/css" href="{% static "assets/vendors/revolution/css/layers.css" %}">
+	<link rel="stylesheet" type="text/css" href="{% static "assets/vendors/revolution/css/settings.css" %}">
+	<link rel="stylesheet" type="text/css" href="{% static "assets/vendors/revolution/css/navigation.css" %}">
+	<!-- REVOLUTION SLIDER END -->	
+</head>
+<body id="bg">
+<div class="page-wraper">
+	<!-- Header Top ==== -->
+    <header class="header rs-nav header-transparent">
+    {% comment %} {% if user.is_authenticated %} {% endcomment %}
+		{% comment %} <div class="top-bar">
+			<div class="container">
+				<div class="row d-flex justify-content-between">
+					<div class="topbar-left">
+						<ul>
+							<li><a href="/faq"><i class="fa fa-question-circle"></i>Ask a Question</a></li>
+							<li><a href="javascript:;"><i class="fa fa-envelope-o"></i>Support@Surfa.com</a></li>
+						</ul>
+					</div>
+					<div class="topbar-right">
+						<ul>
+							
+							<li>
+								<select class="header-lang-bx">
+									<option data-icon="flag flag-uk">English UK</option>
+									<option data-icon="flag flag-us">English US</option>
+								</select>
+							</li>
+							
+							
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div> {% endcomment %}
+		
+		<div class="sticky-header navbar-expand-lg">
+            
+            <div class="menu-bar clearfix">
+                <div class="container clearfix">
+					<!-- Header Logo ==== -->
+					<div class="menu-logo">
+						<a href="{% url 'home' %} "><img src="{% static "assets/images/copy.png" %} "alt=""></a>
+					</div>
+					<!-- Mobile Nav Button ==== -->
+                    <button class="navbar-toggler collapsed menuicon justify-content-end" type="button" data-toggle="collapse" data-target="#menuDropdown" aria-controls="menuDropdown" aria-expanded="false" aria-label="Toggle navigation">
+						<span></span>
+						<span></span>
+						<span></span>
+					</button>
+					<!-- Author Nav ==== -->
+                    <div class="secondary-menu">
+                        <div class="secondary-inner">
+                            <ul>
+								{% if user.is_authenticated %}
+								<li><a href="{% url 'accounts:logout' %}" class="btn-link">Log Out</a></li>
+								{% else %}
+							    <li><a href="{% url 'accounts:login' %}" class="btn-link">Login</a></li>
+							    <li><a href="{% url 'accounts:signup' %}" class="btn-link">Sign Up</a></li>
+							    {% endif %}
+								<li><a href="javascript:;" class="btn-link"><i class="fa fa-facebook"></i></a></li>
+								<li><a href="javascript:;" class="btn-link"><i class="fa fa-google-plus"></i></a></li>
+								<li><a href="javascript:;" class="btn-link"><i class="fa fa-linkedin"></i></a></li>
+								<!-- Search Button ==== -->
+								<li class="search-btn"><button id="quik-search-btn" type="button" class="btn-link"><i class="fa fa-search"></i></button></li>
+								
+							</ul>
+						</div>
+                    </div>
+					<!-- Search Box ==== -->
+                    <div class="nav-search-bar">
+                        <form action="#">
+                            <input name="search" value="" type="text" class="form-control" placeholder="Type to search">
+                            <span><i class="ti-search"></i></span>
+                        </form>
+						<span id="search-remove"><i class="ti-close"></i></span>
+                    </div>
+					<!-- Navigation Menu ==== -->
+                    <div class="menu-links navbar-collapse collapse justify-content-start" id="menuDropdown">
+						<div class="menu-logo">
+							<a href="/index"><a href="index.html"><img src="{% static "assets/images/logo01.jpg" %} "alt=""></a></a>
+						</div>
+                        <ul class="nav navbar-nav">	
+							{% if user.is_authenticated %}
+							<li class="#"><a href="{% url 'home' %} ">Home </a>
+								
+							</li>
+							<li><a href="#">Corporate Info <i class="fa fa-chevron-down"></i></a>
+								<ul class="sub-menu">
+									<li><a href="/about1">About Us</a></li>
+									
+									<li><a href="/contact1">Contact Us</a></li>
+									
+									
+									<li><a href="/base2">Brand</a></li>
+								</ul>
+							</li>
+							<li class="add-mega-menu"><a href="/membership">Membership </a></li>
+							<li class="add-mega-menu"><a href="/portfolio">Projects </a></li>
+							<li class="add-mega-menu"><a href="javascript:;">Our Service <i class="fa fa-chevron-down"></i></a>
+								<ul class="sub-menu add-menu">
+									<li class="add-menu-left">
+										<h5 class="menu-adv-title">Our Service</h5>
+										<ul>
+											<li><a href="https://surfa.godaddysites.com/">Service </a></li>
+										</ul>
+									</li>
+									<li class="add-menu-right">
+										<img src="{% static "images/10copy.png"  %}"alt=""/>
+									</li>
+								</ul>
+							</li>
+							<li><a href="javascript:;">Blog <i class="fa fa-chevron-down"></i></a>
+								<ul class="sub-menu">
+									<li><a href="/post_index">Blog Classic</a></li>
+								</ul>
+							</li>
+							{% endif %}
+						</ul>
+						<div class="nav-social-link">
+							<a href="javascript:;"><i class="fa fa-facebook"></i></a>
+							<a href="javascript:;"><i class="fa fa-google-plus"></i></a>
+							<a href="javascript:;"><i class="fa fa-linkedin"></i></a>
+						</div>
+                    </div>
+					<!-- Navigation Menu END ==== -->
+                </div>
+            </div>
+        </div>
+    </header>
+	{% block content %}
+	{% load bootstrap5 %}
+
+	{% endblock content %}
+    
+</body>
+
+</html>

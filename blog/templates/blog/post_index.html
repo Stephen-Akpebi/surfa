@@ -1,0 +1,71 @@
+{% extends 'surfa/base.html' %}
+{% block content %}
+{% load static %}
+
+
+<div class="page-wraper">
+    <!-- Content -->
+    <div class="page-content bg-white">
+        <!-- inner page banner -->
+        <div class="page-banner ovbl-dark" style="background-image:url({% static "assets/images/banner/forty.jpg" %});">
+            <div class="container">
+                <div class="page-banner-entry">
+                    <h1 class="text-white">Blog</h1>
+				</div>
+            </div>
+        </div>
+        <div class="breadcrumb-row">
+			<div class="container">
+				<ul class="list-inline">
+					<li><a href="{% url 'home' %} ">Home</a></li>
+					<li>blog</li>
+				</ul>
+			</div>
+		</div>
+        <div class="section-area section-sp2 popular-courses-bx">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 heading-bx left">
+                        <h2 class="title-head">Our <span>Blog</span></h2>
+                        <p>Get to know more about Surfa{% block sidebar %} {% include 'blog/sidebar.html' %} {% endblock sidebar %}</p>
+                        <p>With new technologies flooding every day, it is hard to keep up with all the updates. Blogs are a valuable resource for keeping up with recent innovations, communicating with fellow developers and getting a feel of what software development is all about. Living in an era of content overload, it is hard to find the best developer blogs out there.
+                            Some blogs post updates every day and every hour, while others only reflect on major innovations. There is definitely a lot to choose from and each and every one of them is somehow different from the other. However, it is important that you can tell the bad from the good and follow only quality blogs that provide trustworthy information.</p>
+                            
+                    </div>
+                </div>
+                <div class="row">
+                    <!-- Blog Entries Column -->
+                    <div class="courses-carousel owl-carousel owl-btn-1 col-12 p-lr0">
+                        {% for post in post_list %}
+                        <div class="item">
+                            <div class="cours-bx">
+                                <div class="action-box">
+                                    <img src="{{ post.image.url }}" class="rounded featured-image-list" alt="{{post.title}}">
+                                    <a href="{% url 'post_detail' post.slug  %}" class="btn">Read More</a>
+                                </div>
+                                <div class="info-bx text-center">
+                                    <h5><a href="#"{{ post.title }}></a></h5>
+                                    <p class="card-text text-muted h6">{{ post.author }} | {{ post.created_on}} </p>
+                                    <span>{{post.content|slice:":100" }}</span>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+            </div>
+        </div>
+        <div class="breadcrumb-row">
+			<div class="container">
+				<ul class="list-inline">
+					<li><a href="{% url 'home' %} ">Home</a></li>
+					<li>blog</li>
+				</ul>
+			</div>
+		</div>
+    </div>
+    {% block footer %}
+	{% include 'surfa/footer.html' %}
+	{% endblock footer %}
+
+{% endblock content %}

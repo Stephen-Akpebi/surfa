@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Dashboard with Flexmonster</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <meta charset="UTF-8">
+    <script src="https://cdn.flexmonster.com/flexmonster.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.flexmonster.com/demo.css">
+    </head>
+    <body>
+        <div id="pivot-table-container" data-url="{% url 'pivot_data' %}"></div>
+        <div id="pivot-chart-container"></div>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        
+        <script>
+            function processData(dataset) {
+                var result = []
+                dataset = JSON.parse(dataset);
+                dataset.forEach(item => result.push(item.fields));
+                return result;
+            }
+            $.ajax({
+                url: $("#pivot-table-container").attr("data-url"),
+                dataType: 'json',
+                success: function(data) {
+                    new Flexmonster({
+                        container: "#pivot-table-container",
+                        componentFolder: "https://cdn.flexmonster.com/",
+                        width: "100%",
+                        height: 430,
+                        toolbar: true,
+                        report: {
+                            dataSource: {
+                                type: "json",
+                                data: processData(data)
+                            },
+                            slice: {}
+                        }
+                    });
+                    new Flexmonster({
+                        container: "#pivot-chart-container",
+                        componentFolder: "https://cdn.flexmonster.com/",
+                        width: "100%",
+                        height: 430,
+                        //toolbar: true,
+                        report: {
+                            dataSource: {
+                                type: "json",
+                                data: processData(data)
+                            },
+                            slice: {},
+                            "options": {
+                                "viewType": "charts",
+                                "chart": {
+                                    "type": "pie"
+                                }
+                            }
+                        }
+                    });
+                }
+            });
+        </script>
+        <script>
+            mapping: {
+                "product_category": {
+                    "caption": "Product Category",
+                    "type": "string"
+                },
+                "payment_method": {
+                    "caption": "Payment Method",
+                    "type": "string"
+                },
+                "shipping_cost": {
+                    "caption": "Shipping Cost",
+                    "type": "number"
+                },
+                "unit_price": {
+                    "caption": "Unit Price",
+                    "type": "number"
+                }
+            }
+        </script>
+    </body>
+</html>
+
