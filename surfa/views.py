@@ -2,6 +2,7 @@
 from django.views.generic import (View,TemplateView,ListView)
 from django.views import generic
 from django.views import generic
+from .models import Post_Projects
 from blog.models import Post
 from django.shortcuts import render
 from django.http import JsonResponse
@@ -22,7 +23,11 @@ class Base2(TemplateView):
     template_name = 'surfa/base2.html'
 
 
-class PortfolioView(TemplateView):
+#class PortfolioView(TemplateView):
+#    template_name = 'surfa/portfolio.html'
+
+class PortfolioView(generic.ListView):
+    queryset = Post_Projects.objects.filter(status=1)
     template_name = 'surfa/portfolio.html'
 
 class Contact1(TemplateView):

@@ -122,12 +122,12 @@
                     <div class="secondary-menu">
                         <div class="secondary-inner">
                             <ul>
-								{% if user.is_authenticated %}
+								{% comment %} {% if user.is_authenticated %}
 								<li><a href="{% url 'accounts:logout' %}" class="btn-link">Log Out</a></li>
 								{% else %}
 							    <li><a href="{% url 'accounts:login' %}" class="btn-link">Login</a></li>
 							    <li><a href="{% url 'accounts:signup' %}" class="btn-link">Sign Up</a></li>
-							    {% endif %}
+							    {% endif %} {% endcomment %}
 								<li><a href="javascript:;" class="btn-link"><i class="fa fa-facebook"></i></a></li>
 								<li><a href="javascript:;" class="btn-link"><i class="fa fa-google-plus"></i></a></li>
 								<li><a href="javascript:;" class="btn-link"><i class="fa fa-linkedin"></i></a></li>
@@ -181,7 +181,7 @@
 							</li>
 							<li><a href="javascript:;">Blog <i class="fa fa-chevron-down"></i></a>
 								<ul class="sub-menu">
-									<li><a href="/post_index">Blog Classic</a></li>
+									<li><a href="https://medium.com/@surfaorg">Blog Classic</a></li>
 								</ul>
 							</li>
 						</ul>
