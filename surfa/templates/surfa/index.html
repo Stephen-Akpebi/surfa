@@ -4,7 +4,6 @@
     <!-- Content -->
 {% block content %}
 {% load static %}
-{% if user.is_authenticated %}
 <div class="page-wraper">
 	<div class="page-content bg-white">
         <!-- inner page banner -->
@@ -584,5 +583,4 @@
 	{% block footer %}
 	{% include 'surfa/footer.html' %}
 	{% endblock footer %}
-{% endif %}
 {% endblock content %}

@@ -151,7 +151,6 @@
 							<a href="/index"><a href="index.html"><img src="{% static "assets/images/logo01.jpg" %} "alt=""></a></a>
 						</div>
                         <ul class="nav navbar-nav">	
-							{% if user.is_authenticated %}
 							<li class="#"><a href="{% url 'home' %} ">Home </a>
 								
 							</li>
@@ -185,7 +184,6 @@
 									<li><a href="/post_index">Blog Classic</a></li>
 								</ul>
 							</li>
-							{% endif %}
 						</ul>
 						<div class="nav-social-link">
 							<a href="javascript:;"><i class="fa fa-facebook"></i></a>
