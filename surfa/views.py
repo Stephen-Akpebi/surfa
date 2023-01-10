@@ -13,7 +13,7 @@ from django.core import serializers
 # Create your views here.
 
 class HomePage(TemplateView):
-    template_name = 'surfa/index.html'
+    template_name = 'surfa/index2.html'
 
 
 class Membership(TemplateView):

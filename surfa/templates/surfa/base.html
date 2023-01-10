@@ -122,12 +122,12 @@
                     <div class="secondary-menu">
                         <div class="secondary-inner">
                             <ul>
-								{% comment %} {% if user.is_authenticated %}
+								{% if user.is_authenticated %}
 								<li><a href="{% url 'accounts:logout' %}" class="btn-link">Log Out</a></li>
 								{% else %}
 							    <li><a href="{% url 'accounts:login' %}" class="btn-link">Login</a></li>
 							    <li><a href="{% url 'accounts:signup' %}" class="btn-link">Sign Up</a></li>
-							    {% endif %} {% endcomment %}
+							    {% endif %}
 								<li><a href="javascript:;" class="btn-link"><i class="fa fa-facebook"></i></a></li>
 								<li><a href="javascript:;" class="btn-link"><i class="fa fa-google-plus"></i></a></li>
 								<li><a href="javascript:;" class="btn-link"><i class="fa fa-linkedin"></i></a></li>
@@ -160,7 +160,7 @@
 									<li><a href="/contact1">Contact Us</a></li>
 								</ul>
 							</li>
-							<li class="add-mega-menu"><a href="/membership">Membership </a></li>
+							<li class="add-mega-menu"><a href="/membership">Work here </a></li>
 							<li class="add-mega-menu"><a href="/portfolio">Projects </a></li>
 							<li class="add-mega-menu"><a href="javascript:;">Our Service <i class="fa fa-chevron-down"></i></a>
 								<ul class="sub-menu add-menu">
