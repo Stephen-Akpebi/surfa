@@ -6,6 +6,16 @@
     --dark: #202942;
 }
 
+html,
+body {
+    height: 100%;
+    -webkit-font-smoothing: antialiased;
+    margin: auto;
+    -ms-overflow-style: none;
+    overflow-x: hidden;
+    font-smoothing: antialiased;
+}
+
 
 /*** Spinner ***/
 
@@ -187,6 +197,7 @@ h6,
 @media (min-width: 992px) {
     .navbar {
         position: absolute;
+        margin: 0%;
         width: 100%;
         top: 0;
         left: 0;
