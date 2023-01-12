@@ -12,9 +12,8 @@ body {
     font-family: "Helvetica", sans-serif;
     -webkit-font-smoothing: antialiased;
     margin: auto;
-    -ms-overflow-style: none;
     overflow-x: hidden;
-    font-smoothing: antialiased;
+    -ms-overflow-style: none;
 }
 
 
@@ -127,7 +126,7 @@ h6,
     font-size: 10px;
     font-weight: bold;
     vertical-align: middle;
-    margin-left: 8px;
+    margin-left: 0px;
 }
 
 .navbar .navbar-nav .nav-link {
