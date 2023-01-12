@@ -6,6 +6,16 @@
     --dark: #202942;
 }
 
+html,
+body {
+    height: 100%;
+    font-family: "Helvetica", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    margin: auto;
+    overflow-x: auto;
+    -ms-overflow-style: none;
+}
+
 
 /*** Spinner ***/
 
