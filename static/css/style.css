@@ -6,15 +6,6 @@
     --dark: #202942;
 }
 
-html,
-body {
-    height: 100%;
-    font-family: "Helvetica", sans-serif;
-    -webkit-font-smoothing: antialiased;
-    margin: auto;
-    -ms-overflow-style: none;
-}
-
 
 /*** Spinner ***/
 
@@ -47,6 +38,7 @@ body {
 .py-6 {
     padding-top: 6rem;
     padding-bottom: 6rem;
+    overflow-x: hidden;
 }
 
 
